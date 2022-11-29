@@ -1,0 +1,38 @@
+# config file
+
+variables: [z,mslp, t2m]
+#variables: [wind,z,mslp, t2m]
+    
+# Some constants
+DATE_START : '1979-01-01'
+# New extended version
+#DATE_START : '1959-01-01'
+DATE_END : '2021-12-31'
+
+YY_TRAIN : [1979, 2016]
+YY_TEST : [2017, 2021]
+#YY_TEST : [2016, 2021]
+YY_VALID : 2015
+#YY_VALID : 2013
+# extended version
+#YY_TRAIN : [1959, 2011]
+#YY_TEST : [2012, 2021]
+#YY_VALID : 2001
+
+LEVELS : [200, 300, 500, 850, 1000]
+G : 9.80665 
+LONS_eur : [-30, 30]
+LATS_eur : [30, 80]
+# reduce lats/lons
+#LONS_eur : [-90, 30]
+#LATS_eur : [20, 80]
+
+BATCH_SIZE : 64 # try increase, decrease it
+
+#PATH_ERA5: '/storage/workspaces/giub_hydro/hydro/data/ERA5/Global_grid/GridS2S/'
+PATH_ERA5: '/storage/workspaces/giub_hydro/hydro/data/ERA5_extended/GridS2S/'
+PATH_S2S_hind: '/storage/workspaces/giub_hydro/hydro/S2S_data/hindcast/ECMWF/sfc/'
+PATH_S2S_forecast: '/storage/workspaces/giub_hydro/hydro/S2S_data/forecast/ECMWF/sfc/'
+
+# to store raw
+PATH_raw_zarr: '/storage/workspaces/giub_hydro/hydro/S2S_data/raw_zarr/'
